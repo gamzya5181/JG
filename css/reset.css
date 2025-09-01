@@ -1,0 +1,75 @@
+@charset "UTF-8";
+      /* *reset */
+      html,body {
+        scroll-behavior: smooth;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing:border-box;
+        }
+
+      a {
+        color:inherit;
+        text-decoration: none;
+      }
+
+      .blind,
+       legend {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        }
+
+      table{
+        border-collapse: collapse;
+        border-spacing: 0;
+        table-layout: fixed;
+        overflow: break-word;
+        }
+
+      select,
+      button,
+      input{
+        border: none;
+        background-color: transparent;
+        color: inherit;
+        }
+
+      fieldset{
+        border: none;
+        }
+      
+      button{
+        cursor: pointer;
+      }
+
+      img{
+        max-width: 100%;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6{
+        font-size: inherit;
+        font-weight: inherit;
+        }
+
+      ul,
+      ol,
+      summary{
+        list-style: none;
+        }
+
+      td, th{
+        border: 1px solid #c8c8c8;
+        padding: 12px;
+        }
+
+        
