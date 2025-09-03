@@ -282,13 +282,13 @@ progress::-webkit-progress-value {
 }
 
 .self-container .self img:nth-child(2) {
-  top: 40%;
-  right: 5%;
+  top: 45%;
+  right: 10%;
   rotate: 15deg;
 }
 .self-container .self img:nth-child(1) {
-  top: 10%;
-  right: 15%;
+  top: 15%;
+  right: 20%;
   rotate: -5deg;
 }
 
@@ -320,13 +320,13 @@ progress::-webkit-progress-value {
 .contact-container article{
     display: flex;
     justify-content: space-between;
-    outline: 1px solid red;
+  
 }
 
 .contact-form{
      display: flex;
      flex-direction: column;
      justify-content: flex-start;
-     outline: 1px solid red;
+
 }
 
