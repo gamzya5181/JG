@@ -14,39 +14,19 @@
 <body>
     <div class="all-container">
        
-    <main>
+    <section class="home-container" id="home">
+
         <header class="top-bar">
             <h1>JG</h1>
-            <!-- <nav class="top-nav">
-                <ul>
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#project">PROJECT</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-            </nav> -->
         </header>
-        
-        <nav class="nav-container">
-            <ul class="front-nav">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-            </ul>
 
-            <ul class="back-nav"> 
-                <li><a href="#project">PROJECT</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-               
-           
-        </nav>
         
-        <section class="visual-container">
+        
+        <article class="visual-container" >
             <h2>DESIGN TO EXPRESS MYSELF</h2>
             
             <div class="hero">
                 <img src="./image/logo_img/jg.png" alt="illust profile">
-                <strong>JG</strong>
             </div>
             
             <div class="decorations" aria-hidden="true">
@@ -56,96 +36,196 @@
                 <img src="./image/icon/star_04.png" alt="">
                 <img src="./image/icon/star_01.png" alt="">
             </div>
+        </article>
 
-            <div class="sub">
-                <img src="./image/sub_01.png" alt="photo1">
-                <img src="./image/sub_02.png" alt="photo2">
-                <img src="./image/sub_03.png" alt="photo3">
-                <img src="./image/sub_04.png" alt="photo4">
-            </div>
-        </section>
-    </main>
+        <nav class="nav-container">
+            <ul class="front-nav">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+            </ul>
+
+            <ul class="back-nav"> 
+                <li><a href="#project">PROJECT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </section>    
        
-        <section class="about-container" id="about">
-            <div class="top">
-                <img src="./image/logo_img/notebook.png" alt="notebook">
-                <h2>ABOUT</h2>
+    <section class="about-container" id="about">
+        <div class="top">
+            <img src="./image/logo_img/notebook.png" alt="notebook">
+            <h2>ABOUT</h2>
+        </div>
+
+        <article class="profile-container">
+            <h3>PROFILE</h3>
+               <div class="profile">
+                        <div class="front">
+                            <ul>
+                                <li>김지경 | Kim Ji Gyeong</li>
+                                <li>1990.12.10</li>
+                                <li>010 3375 2828</li>
+                                <li>gamzya5181@gmail.com</li>
+                            </ul>
+                            
+                            <ul>
+                                <li>
+                                    <strong>2009 - 2012</strong>
+                                    <p>영진전문대학 유아교육과 졸업</p>
+                                </li>       
+                                <li>
+                                    <strong>2012 - 2013</strong>
+                                    <p>유아교육  학사 졸업</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="photo">
+                            <img src="./image/사진01.png" alt="photo1">
+                        </div>
+             
+
+                        <div class="back">
+                            <ul class="skills">
+                                <li>
+                                    <label for="skill-ps">Adobe Photoshop</label>
+                                    <progress id="skill-ps" value="80" max="100">80%</progress>
+                                </li>
+
+                                <li>
+                                    <label for="skill-ai">Adobe Illustrator</label>
+                                    <progress id="skill-ai" value="80" max="100">80%</progress>
+                                </li>
+
+                                <li>
+                                    <label for="skill-pr">Adobe Premiere Pro</label>
+                                    <progress id="skill-pr" value="60" max="100">60%</progress>
+                                </li>
+
+                                <li>
+                                    <label for="skill-ae">Adobe After Effects</label>
+                                    <progress id="skill-ae" value="70" max="100">70%</progress>
+                                </li>
+                            </ul>
+
+                            <ul>
+                                <li>24.05  GTQ 1급</li>       
+                                <li>24.08  GTQi 1급</li>
+                                <li>24.12  컴퓨터 그래픽 기능사</li>  
+                                <li>25.06  멀티미디어콘텐츠 제작 전문가 </li>
+                            </ul>
+                        </div>
+            
+                    
+             </div>   
+        </article>
+
+        <article class="self-container">
+            <h3>SELF INTRODUCTION</h3>
+
+            <div class="self">
+            <img src="./image/사진02.png" alt="photo2">
+            <img src="./image/사진03.png" ait="photo3">
             </div>
-           
-            <article>
-                <h3>PROFILE</h3>
-                <img src="./image/about_01.png" alt="photo1">
-                    <div class="Information">
-                        <ul>
-                            <li>김지경 | Kim Ji Gyeong</li>
-                            <li>1990.12.10</li>
-                            <li>010 3375 2828</li>
-                            <li>gamzya5181@gmail.com</li>
-                        </ul>
-                    </div>
 
-                    <div class="Education">
-                       <ul>
-                            <li>2009 - 2012</li>       
-                            <li>영진전문대학 유아교육과 졸업</li>
-                            <li>2012 - 2013</li>  
-                            <li>유아교육  학사 졸업</li>
-                        </ul>
-                    </div>
-
-                    <div class="Skills">
-                        <ul>
-                            <li>
-                                <label for="skill-ps">Photoshop</label>
-                                <progress id="skill-ps" value="80" max="100">80%</progress>
-                            </li>
-
-                            <li>
-                                <label for="skill-ps">Adobe Illustrator</label>
-                                <progress id="skill-ps" value="80" max="100">80%</progress>
-                            </li>
-
-                            <li>
-                                <label for="skill-ps">Adobe Premiere Pro</label>
-                                <progress id="skill-ps" value="80" max="100">60%</progress>
-                            </li>
-
-                             <li>
-                                <label for="skill-ps">Adobe After Effects</label>
-                                <progress id="skill-ps" value="80" max="100">70%</progress>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="Licenses">
-                        <ul>
-                            <li>24.05  GTQ 1급</li>       
-                            <li>24.08  GTQi 1급</li>
-                            <li>24.12  컴퓨터 그래픽 기능사</li>  
-                            <li>25.06  멀티미디어콘텐츠 제작 전문가 </li>
-                        </ul>
-                    </div>
-            </article>
-
-            <article class="">
-                <h3>INTRODUCTION</h3>
-                    <div class="qna_01">
-                       <h4>Q1. 자기 소개 부탁드려요.</h4>
+                <div class="qna">
+                    <ul>
+                        <li> 
+                            <h4>Q1. 자기 소개 부탁드려요.</h4>
                             <p>
-                             저는 한동안 ‘나는 누구인가, 나는 어떤 삶을 살고 있는가’라는 질문에 답하지 못했습니다. 
-                             나 자신과도 친하지 않다는 생각이 들었고, 그래서 더 나와 가까워지고 싶었습니다. 디자인은 그 과정을 가능하게 해줬습니다. 생각을 정리하고, 나만의 시선을 담아내면서, 저는 조금씩 삶의 정체성을 찾아가고 있습니다.
+                            저는 한동안 ‘나는 누구인가, 나는 어떤 삶을 살고 있는가’라는 질문에 답하지 못했습니다.<br>
+                            나 자신과도 친하지 않다는 생각이 들었고, 그래서 더 나와 가까워지고 싶었습니다.<br>
+                            디자인은 그 과정을 가능하게 해줬습니다. 생각을 정리하고, 나만의 시선을 담아내면서,<br>
+                            저는 조금씩 삶의 정체성을 찾아가고 있습니다.
                             </p>
-                    </div>
-                  
-            </article>
-        </section>
+                        </li>
+
+                       <li>
+                            <h4>Q2. 디자인에 관심을 가지게 된 이유는?</h4>
+                            <p>
+                            처음 디자인에 관심을 가진 건, 단순히 무언가를 예쁘게 만드는 게 아니라 생각을 정리하고,<br>
+                            나만의 시선으로 표현할 수 있다는 점 때문이었습니다.<br>
+                            한 장의 발표 자료, 한 장의 포스터가 사람들의 반응을 바꾸는 걸 보면서, 디자인의 힘을 직접 느꼈습니다. <br>
+                            그 경험이 계기가 되어 본격적으로 디자인을 배우기 시작했습니다.
+                            </p>
+                       </li>
+
+                       <li>
+                        <h4>Q3. 앞으로 어떤 디자이너로 성장하고 싶으세요?</h4>
+                        <p>
+                        저는 단순히 결과물을 만드는 사람이 아니라, 복잡한 문제를 단순하게 풀어내고, <br>
+                        사람들에게 새로운 시선을 제안하는 디자이너가 되고 싶습니다.<br>
+                        또한 과정 속에서 협업하고, 시행착오를 통해 배우며 성장하는 디자이너로 나아가고 있습니다.
+                        </p>
+                       </li>
+                    </ul>
+                </div>
+    
+            </div>
+
+
+            
+        </article>
+    </section>
 
         <section id="project">
             <div class="testarea">PROJECT</div>
         </section>
 
-        <section id="contact">
-            <div class="testarea">CONTACT</div>
+        <section class="contact-container" id="contact">
+
+            <div>
+                <h2>CONTACT</h2>
+                <img src="./image/icon/star_02.png">
+                <img src="./image/icon/star_01.png">
+            </div>
+
+            
+        <article>
+            <div class="information">
+                <p>궁금한 점이 있거나 함께 하고 싶은 프로젝트가 있다면 편하게 연락 주세요!</p>
+                <span>
+                    <img src="./image/icon/github.svg" alt="github">
+                    <p>https://gamzya5181.github.io/JG/</p>
+                </span>
+                <span>
+                    <img src="./image/icon/mail.svg" alt="mail">
+                    <p>gamzya@gmail.com</p>
+                </span>
+                <span>
+                    <img src="./image/icon/phone.svg" alt="phone">
+                    <p>010 3375 2828</p>
+                </span>
+            </div> 
+
+            <form class="contact-form">
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" name="name" required>
+                </div>
+
+                <div class="field">
+                    <label for="email">E-Mail</label>
+                    <input id="email" type="email" name="email" required>
+                </div>
+
+                <div class="field">
+                    <label for="phone">Phone</label>
+                    <input id="phone" type="tel" name="phone">
+                </div>
+
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+
+                <button type="submit">SEND</button>
+            </form>
+        </article>    
+
+
+
+
         </section>
 
     </div>
