@@ -240,11 +240,9 @@ progress::-webkit-progress-value {
 .profile{
     display: flex; 
     justify-content: center; 
-    outline: 1px solid red;
 }
 
 .profile li{
-    outline: 1px solid red;
     margin-bottom: 20px; /* li 사이 간격 */
 }
 
@@ -325,12 +323,11 @@ progress::-webkit-progress-value {
 
 .contact-top{
     display: flex;
-    outline: 1px solid red;
 }
 
 .contact-container .contact-top img{
     position: absolute;
-    outline: 1px solid red;
+
 }
 .contact-container .contact-top img:nth-child(1){
     width: 5%;
