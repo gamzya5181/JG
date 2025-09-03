@@ -240,20 +240,27 @@ progress::-webkit-progress-value {
 .profile{
     display: flex; 
     justify-content: center; 
+    outline: 1px solid red;
 }
 
 .profile li{
-    margin-bottom: 20px;
+    outline: 1px solid red;
+    margin-bottom: 20px; /* li 사이 간격 */
 }
 
-.profile img{
-    width: 30vw;
+.front ul li:last-child, .back ul li:last-child  {
+    margin-bottom: 0; /* 마지막 li는 간격 제거 */
+}
+
+.photo img{
+    width: 40vw;
 }
 .front, .back{
     width: 37vw;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
+   
 }
 
 .about-container ul, .self-container{
@@ -292,8 +299,16 @@ progress::-webkit-progress-value {
   rotate: -5deg;
 }
 
-#project .testarea {
-    height:100vh;background-color:gold;
+.project {
+    height:100vh;
+    background-color:black;
+}
+
+.berry img {
+  display: block;   /* 인라인 → 블록 요소로 바꾸기 */
+  width: 100%;
+  height: auto;
+  margin: 0;        /* 여백 제거 */
 }
 
 .contact-container{
@@ -302,10 +317,28 @@ progress::-webkit-progress-value {
     padding: 20px;
     position: relative;
 }
+
 .contact-container h2{
     font-size: 150px;
     color: #3C4299;
 }
+
+.contact-top{
+    display: flex;
+    outline: 1px solid red;
+}
+
+.contact-container .contact-top img{
+    position: absolute;
+    outline: 1px solid red;
+}
+.contact-container .contact-top img:nth-child(1){
+    width: 5%;
+    top: 100%;
+    left: 40%
+}
+
+
 .contact-container p, .information span, .contact-form{
     font-family: 'NanumSquareRound';
     font-size: 22px;

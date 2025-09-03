@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤 애니메이션</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 200vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            margin: 100px 0;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .animate-element {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+
+        .animate-element.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-left {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: all 0.8s ease-out;
+        }
+
+        .slide-left.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-right {
+            opacity: 0;
+            transform: translateX(100px);
+            transition: all 0.8s ease-out;
+        }
+
+        .slide-right.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 0.8s ease-out;
+        }
+
+        .scale-in.animate {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .rotate-in {
+            opacity: 0;
+            transform: rotate(-180deg) scale(0.5);
+            transition: all 1s ease-out;
+        }
+
+        .rotate-in.animate {
+            opacity: 1;
+            transform: rotate(0deg) scale(1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #f0f0f0, #e0e0e0);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #e0e0e0;
+            border-radius: 3px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 0%;
+            transition: width 1s ease-out;
+        }
+
+        .progress-fill.animate {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="section">
+            <h1 class="animate-element">스크롤 애니메이션</h1>
+            <p class="animate-element">화면을 스크롤하면 다양한 애니메이션 효과를 확인할 수 있습니다.</p>
+        </section>
+
+        <section class="section">
+            <h2 class="slide-left">좌측에서 슬라이드</h2>
+            <p class="slide-left">이 요소는 화면 좌측에서 슬라이드되어 나타납니다.</p>
+            <div class="grid">
+                <div class="card slide-left">
+                    <div class="icon">🚀</div>
+                    <h3>좌측 애니메이션 1</h3>
+                    <p>부드럽게 좌측에서 나타납니다</p>
+                </div>
+                <div class="card slide-left">
+                    <div class="icon">⭐</div>
+                    <h3>좌측 애니메이션 2</h3>
+                    <p>순차적으로 애니메이션이 실행됩니다</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="slide-right">우측에서 슬라이드</h2>
+            <p class="slide-right">이 요소는 화면 우측에서 슬라이드되어 나타납니다.</p>
+            <div class="grid">
+                <div class="card slide-right">
+                    <div class="icon">💡</div>
+                    <h3>우측 애니메이션 1</h3>
+                    <p>우측에서 부드럽게 나타납니다</p>
+                </div>
+                <div class="card slide-right">
+                    <div class="icon">🎯</div>
+                    <h3>우측 애니메이션 2</h3>
+                    <p>시각적으로 매력적인 효과</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="scale-in">확대 애니메이션</h2>
+            <p class="scale-in">이 요소는 작은 크기에서 확대되어 나타납니다.</p>
+            <div class="grid">
+                <div class="card scale-in">
+                    <div class="icon">🌟</div>
+                    <h3>확대 애니메이션</h3>
+                    <p>작은 크기에서 시작하여 확대됩니다</p>
+                </div>
+                <div class="card scale-in">
+                    <div class="icon">🎨</div>
+                    <h3>스케일 효과</h3>
+                    <p>부드러운 확대 애니메이션</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="rotate-in">회전 애니메이션</h2>
+            <p class="rotate-in">이 요소는 회전하면서 나타납니다.</p>
+            <div class="grid">
+                <div class="card rotate-in">
+                    <div class="icon">🌀</div>
+                    <h3>회전 애니메이션</h3>
+                    <p>회전하면서 확대되어 나타납니다</p>
+                </div>
+                <div class="card rotate-in">
+                    <div class="icon">✨</div>
+                    <h3>회전 효과</h3>
+                    <p>독특한 회전 애니메이션</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="animate-element">진행률 바 애니메이션</h2>
+            <p class="animate-element">스크롤 시 진행률 바가 채워집니다.</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Intersection Observer를 사용한 스크롤 애니메이션
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // 모든 애니메이션 요소들을 관찰
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.animate-element, .slide-left, .slide-right, .scale-in, .rotate-in, .progress-fill');
+            animateElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // h1 클릭 시 콘솔 출력 (기존 기능 유지)
+        function logH1Content() {
+            const h1Element = document.querySelector('h1');
+            console.log('h1 태그 내용:', h1Element.textContent);
+        }
+
+        // h1에 클릭 이벤트 추가
+        document.addEventListener('DOMContentLoaded', () => {
+            const h1Element = document.querySelector('h1');
+            h1Element.addEventListener('click', logH1Content);
+        });
+    </script>
+</body>
+</html>
