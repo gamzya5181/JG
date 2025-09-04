@@ -336,11 +336,12 @@ progress::-webkit-progress-value {
 }
 
 
-.contact-container p, .information span, .contact-form{
+.contact-container p, .information span{
     font-family: 'NanumSquareRound';
     font-size: 22px;
-     display: flex;
-} 
+    display: flex;
+}
+    
 
 .information {
     display: flex;
@@ -357,6 +358,100 @@ progress::-webkit-progress-value {
      display: flex;
      flex-direction: column;
      justify-content: flex-start;
+     width: 60%;
 
 }
 
+.field{
+    font-family:  'NanumSquareRound';
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+/* ---- 최소 핵심 토큰 ---- */
+:root{
+  --bg: #000;           /* 배경 */
+  --fg: #fff;           /* 글자 */
+  --accent: #3C4299;    /* 버튼/포인트 */
+  --muted: #D9D9D9;     /* 인풋 배경 */
+}
+
+.information-container{
+  background: var(--bg);
+  color: var(--fg);
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 좌 정보 / 우 폼 */
+  gap: 48px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  min-height: 80vh;
+}
+
+/* ---- 좌측 정보 ---- */
+.information p{
+  line-height: 1.6;
+  margin: 0 0 24px;
+  font-size: 18px;
+}
+.information span{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+.information span img{
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+.information a{ color: var(--fg); text-decoration: underline; }
+
+/* ---- 우측 폼 ---- */
+form{
+  display: grid;
+  gap: 16px;
+  max-width: 520px;
+  justify-self: end; /* 오른쪽 정렬 */
+}
+.field{ display: grid; gap: 8px; }
+label{ font-size: 14px; opacity: .9; }
+
+input, textarea{
+  width: 100%;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--muted);
+  color: #111;
+  font-size: 16px;
+  outline: none;
+}
+textarea{ resize: vertical; min-height: 120px; }
+
+button[type="submit"]{
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .4px;
+  cursor: pointer;
+}
+button[disabled]{ opacity:.6; cursor: not-allowed; }
+
+/* ---- 간단 포커스 가시성 ---- */
+input:focus, textarea:focus{
+  box-shadow: 0 0 0 3px rgba(89,96,242,.35);
+}
+
+/* ---- 반응형: 1열 스택 ---- */
+@media (max-width: 900px){
+  article{ grid-template-columns: 1fr; gap: 32px; }
+  form{ justify-self: stretch; max-width: none; }
+}
