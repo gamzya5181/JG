@@ -32,31 +32,21 @@ html,body {
     color: #fff;
     background-color: black;
 }
-
-body{
-     padding-bottom: var(--nav-h); 
-}
-
 section {
-  min-height: 100vh;  /* 화면 한 뷰포트 높이만큼 */
-  padding-bottom: calc(100px + var(--nav-h)); 
+  min-height: 100vh;
   box-sizing: border-box;
 }
 
 .home-container h1{
     font-family: "Charmonman", cursive;
     font-weight: 700;
+    font-size: 30px;
     font-style: normal;
     line-height: 1;
 }
 
-.home-container h1{
-    font-size: 30px;
-}
-
 .home-container{
     height: 100vh;  /* 화면 높이 기준 */
-    width: calc(100vw - 80px); /* 패딩값 빼줌 (좌우 100px씩이면 200px) */
     padding: 20px;
     position: relative;
 }
@@ -143,7 +133,7 @@ section {
 
 .hero:hover{
     opacity: 1;
-    transform: scale(1.1);   /* 커지는 비율 */
+    transform: scale(1.1); 
 }
 
 
@@ -239,7 +229,7 @@ progress::-webkit-progress-value {
 
 .profile{
     display: flex; 
-    justify-content: center; 
+    justify-content: flex-start; 
 }
 
 .profile li{
@@ -251,17 +241,16 @@ progress::-webkit-progress-value {
 }
 
 .photo img{
-    width: 40vw;
+    width: 28vw;
 }
 .front, .back{
     width: 37vw;
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
-   
+    gap:150px;
 }
 
-.about-container ul, .self-container{
+.profile-container li, .profile-container label{
     font-family: 'NanumSquareRound';
     font-size: 18px;
 }
@@ -309,49 +298,50 @@ progress::-webkit-progress-value {
   margin: 0;        /* 여백 제거 */
 }
 
+
+
+
+/* contact */
+
 .contact-container{
-    height: 100vh;  /* 화면 높이 기준 */
-    width: calc(100vw - 80px); /* 패딩값 빼줌 (좌우 100px씩이면 200px) */
-    padding: 20px;
-    position: relative;
+  height: 100vh;  /* 화면 높이 기준 */
+  padding: 20px;
+  position: relative;
 }
 
 .contact-container h2{
-    font-size: 150px;
-    color: #3C4299;
+  font-size: 150px;
+  color: #3C4299;
+  display: flex;
+  justify-content: flex-start;
+  }
+
+.contact-top img{
+  position: absolute;
+}  
+
+.contact-top img:nth-child(2){
+    width: 3%;
+    top: 5%;
+    left: 35%;
 }
-
-.contact-top{
-    display: flex;
-}
-
-.contact-container .contact-top img{
-    position: absolute;
-
-}
-.contact-container .contact-top img:nth-child(1){
-    width: 5%;
-    top: 100%;
-    left: 40%
-}
-
-
-.contact-container p, .information span{
-    font-family: 'NanumSquareRound';
-    font-size: 22px;
-    display: flex;
+.contact-top img:nth-child(3){
+    width: 2%;
+    bottom: 23%;
+    right: 7%;
 }
     
-
-.information {
+.contact-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
-.contact-container article{
+
+.contact-container ul {
     display: flex;
+    flex-direction: column;
+    align-items: start;
     justify-content: space-between;
-  
 }
 
 .contact-form{
@@ -368,80 +358,72 @@ progress::-webkit-progress-value {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
-}
-
-/* ---- 최소 핵심 토큰 ---- */
-:root{
-  --bg: #000;           /* 배경 */
-  --fg: #fff;           /* 글자 */
-  --accent: #3C4299;    /* 버튼/포인트 */
-  --muted: #D9D9D9;     /* 인풋 배경 */
 }
 
 .information-container{
-  background: var(--bg);
-  color: var(--fg);
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* 좌 정보 / 우 폼 */
-  gap: 48px;
-  align-items: start;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 24px;
-  min-height: 80vh;
+  font-family: 'NanumSquareRound';
+  display: flex;
+  gap: 260px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
 }
-
-/* ---- 좌측 정보 ---- */
-.information p{
-  line-height: 1.6;
-  margin: 0 0 24px;
-  font-size: 18px;
-}
-.information span{
+.information-container li{
+  font-size: 20px;
   display: flex;
   align-items: center;
   gap: 12px;
   margin-top: 16px;
 }
-.information span img{
+.information-container img{
   width: 24px;
   height: 24px;
-  display: block;
-}
-.information a{ color: var(--fg); text-decoration: underline; }
+  }
 
-/* ---- 우측 폼 ---- */
-form{
-  display: grid;
+.form-container{
+  font-family: 'NanumSquareRound';
+  display: flex;
   gap: 16px;
   max-width: 520px;
   justify-self: end; /* 오른쪽 정렬 */
 }
-.field{ display: grid; gap: 8px; }
-label{ font-size: 14px; opacity: .9; }
+.field{ 
+  display: flex;
+  width: 400px; 
+  gap: 8px; 
+}
+
+label{ 
+  font-size: 14px; 
+  opacity: .9; 
+}
 
 input, textarea{
   width: 100%;
   padding: 12px 14px;
   border: 0;
   border-radius: 8px;
-  background: var(--muted);
-  color: #111;
+  background: #fff;
   font-size: 16px;
   outline: none;
 }
+
 textarea{ resize: vertical; min-height: 120px; }
 
 button[type="submit"]{
+  font-family: 'NanumSquareRound';
+  width: 400px;
   padding: 12px 16px;
   border: 0;
   border-radius: 8px;
-  background: var(--accent);
   color: #fff;
-  font-weight: 700;
-  letter-spacing: .4px;
+  background-color: #3C4299;
+  letter-spacing: 2px;
+  margin-top: 10px;
   cursor: pointer;
+}
+label{
+  display: flex;
 }
 button[disabled]{ opacity:.6; cursor: not-allowed; }
 

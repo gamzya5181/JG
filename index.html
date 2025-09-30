@@ -190,59 +190,58 @@
             <img src="./image/berry /24_pay.png" alt="">
         </div>
 
-        </section>
 
         <section class="contact-container" id="contact">
 
             <div class="contact-top">
                 <h2>CONTACT</h2>
-                <img src="./image/icon/star_02.png">
                 <img src="./image/icon/star_01.png">
+                <img src="./image/icon/star_02.png">
             </div>
 
             
         <article class="information-container">
-            <div class="information">
-                <p>궁금한 점이 있거나 함께 하고 싶은 프로젝트가 있다면 편하게 연락 주세요!</p>
-                <span>
-                    <img src="./image/icon/github.svg" alt="github">
-                    <p>https://gamzya5181.github.io/JG/</p>
-                </span>
-                <span>
+            <ul>
+                <li>궁금한 점이 있거나 함께 하고 싶은 프로젝트가 있다면 편하게 연락 주세요!</li> 
+                <li>
+                     <img src="./image/icon/github.svg" alt="github">
+                     <span>https://gamzya5181.github.io/JG/</span>
+                </li>
+                
+                <li> 
                     <img src="./image/icon/mail.svg" alt="mail">
-                    <p>gamzya@gmail.com</p>
-                </span>
-                <span>
+                    <span>gamzya5181@gmail.com</span>
+                </li>
+                
+                <li> 
                     <img src="./image/icon/phone.svg" alt="phone">
-                    <p>010 3375 2828</p>
-                </span>
-            </div> 
+                    <span>010 3375 2828</span>
+                </li>
+            </ul> 
 
-            <form class="contact-container" action="https://api.web3forms.com/submit" method="POST">
+            <form class="form-container" action="https://api.web3forms.com/submit" method="POST">
 
                 <input type="hidden" name="access_key" value="a0c21ebb-a2fc-4d42-9b8e-a5e9d40c5574">
 
                 <div class="field">
                     <label for="name">Name</label>
                     <input id="name" type="text" name="name" required>
-                </div>
+            
 
-                <div class="field">
                     <label for="email">E-Mail</label>
                     <input id="email" type="email" name="email" required>
-                </div>
+            
 
-                <div class="field">
                     <label for="phone">Phone</label>
                     <input id="phone" type="tel" name="phone">
-                </div>
+              
 
-                <div class="field">
                     <label for="message">Message</label>
                     <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <button type="submit">SEND</button>
                 </div>
 
-                <button type="submit">SEND</button>
             </form>
         </article>    
 
